@@ -2,6 +2,7 @@ angular.module('alurapic').controller('FotosController', function($scope, $http)
     
     //Array que irá retornar para a view com os objetos retornado do back
     $scope.fotos = [];
+    $scope.filtro = '';
 
     //requisição get que, se sucesso, retornará um array com os objetos javascript (JSON) do back
     $http.get('/v1/fotos')
