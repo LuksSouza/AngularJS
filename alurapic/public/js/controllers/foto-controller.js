@@ -7,7 +7,7 @@ angular.module('alurapic').controller('FotoController', function($scope, $http) 
     $scope.submeter = function() {
         if ($scope.formulario.$valid) {
             $http.post('/v1/fotos', $scope.foto)
-            .sucess(function() {
+            .success(function() {
                 $scope.foto = {};
                 $scope.mensagem = 'Foto cadastrada com sucesso';
             })
