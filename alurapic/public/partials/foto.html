@@ -30,8 +30,8 @@
         </div>
         <div class="form-group" ng-controller="GruposController">
             <label>Grupo</label>
-            <select name="grupo" ng-model="foto.grupo" ng-controller="GruposController" 
-            class="form-control" required ng-options="grupo as (grupo.nome|uppercase) for grupo in grupos">
+            <select name="grupo" ng-model="foto.grupos" ng-controller="GruposController" 
+            class="form-control" required ng-options="grupo._id as (grupo.nome|uppercase) for grupo in grupos">
                 <option value="">Escolha um grupo</option>
             </select>
             <span ng-show="formulario.$submitted && formulario.grupo.$error.required" class="form-control alert-danger">

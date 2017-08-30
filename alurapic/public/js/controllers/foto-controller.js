@@ -20,8 +20,8 @@ angular.module('alurapic').controller('FotoController', function($scope, $http, 
             if ($routeParams.fotoId) {
                 $http.put('/v1/fotos/' + $scope.foto._id, $scope.foto)
                 .success(function() {
-                    $scope.foto = {};
                     $scope.mensagem = 'Foto ' + $scope.foto.titulo + ' atualizada com sucesso';
+                    $scope.foto = {};
                 })
                 .error(function(erro) {
                     console.log(erro);
